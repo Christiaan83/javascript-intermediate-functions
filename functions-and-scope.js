@@ -4,6 +4,27 @@
 
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
+// extra toegevoegd
+const moreGrades = [7,8,9,4,7];
+
+function withHonors(cumLaude) {
+
+    let totalCumlaude = 0
+
+    for (let i = 0; i < cumLaude.length; i++) {
+
+        if(cumLaude[i] >= 8) {
+          totalCumlaude = totalCumlaude + 1
+
+    }
+    }
+    return totalCumlaude
+}
+
+console.log(withHonors(grades))
+// extra toegevoegd
+console.log(withHonors(moreGrades))
+
 /* Opdracht  1: Cum Laude */
 
 /* 1a: Script schrijven  */
