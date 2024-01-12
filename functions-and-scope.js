@@ -4,26 +4,7 @@
 
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
-// extra toegevoegd
-const moreGrades = [7,8,9,4,7];
 
-function withHonors(cumLaude) {
-
-    let totalCumlaude = 0
-
-    for (let i = 0; i < cumLaude.length; i++) {
-
-        if(cumLaude[i] >= 8) {
-          totalCumlaude = totalCumlaude + 1
-
-    }
-    }
-    return totalCumlaude
-}
-
-console.log(withHonors(grades))
-// extra toegevoegd
-console.log(withHonors(moreGrades))
 
 /* Opdracht  1: Cum Laude */
 
@@ -34,6 +15,29 @@ console.log(withHonors(moreGrades))
 // * Hoe zorg ik ervoor dat dit ook werkt wanneer de array 100 entries bevat?
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
+
+// extra toegevoegd
+const lowGrades = [6, 4, 5];
+const lateGrades = [8, 9, 4, 6, 10]
+
+function withHonors(cumLaude) {
+
+    let totalCumlaude = 0
+
+    for (let i = 0; i < cumLaude.length; i++) {
+
+        if(cumLaude[i] >= 8) {
+            totalCumlaude = totalCumlaude + 1
+
+        }
+    }
+    return totalCumlaude
+}
+
+console.log(withHonors(grades))
+// 1b
+console.log(withHonors(lowGrades))
+console.log(withHonors(lateGrades))
 
 // ---- Verwachte uitkomst: 6
 
@@ -60,6 +64,27 @@ console.log(withHonors(moreGrades))
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
+
+
+
+function averageGrades(average) {
+
+    let sumGrades = 0
+    let averageGrades = 0
+
+    for (let i = 0; i < average.length; i++) {
+
+        sumGrades += average[i]
+        averageGrades = sumGrades / average.length
+
+    }
+
+    return averageGrades.toFixed(2)
+}
+
+console.log(averageGrades(grades))
+console.log(averageGrades(lowGrades))
+console.log(averageGrades(lateGrades))
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
@@ -91,6 +116,24 @@ console.log(withHonors(moreGrades))
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
 
+function highestGrade(highestNumber) {
+
+    let high = 0
+
+    for (let i = 0; i < highestNumber.length; i++) {
+
+        if (highestNumber[i] > high) {
+            high = highestNumber[i];
+
+        }
+
+    }
+    return high;
+}
+
+console.log(highestGrade(grades))
+console.log(highestGrade(lowGrades))
+console.log(highestGrade(lateGrades))
 // ---- Verwachte uitkomst: 9
 
 
